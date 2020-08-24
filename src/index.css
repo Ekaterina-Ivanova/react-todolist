@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.todoList {
+  padding: 5rem;
+  margin: 5rem auto;
+  width: 600px;
+  background: linear-gradient(to bottom,#ff6a54, #ff4d8e);
+}
+
+.todoList__title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.todoList__removeBtn {
+  background: #ff4d8e;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  height: 19px;
+  cursor: pointer;
+}
+
+.todoList__ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.todoList__li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.todoList__checkbox {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.todoList__addBtn {
+  background: #fff;
+  color: #ff4d8e;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  outline: none;
+}
+
+.todoList__addBtn:hover {
+  background: #ffecf3;
+}
+
+.todoList__textDone {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.todoList__addForm {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.todoList__addForm--input {
+  padding: 0.8rem 1rem;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* анимация загрузки списка */
+
+.todoList__loader {
+  height: 80px;
+  margin: 0 auto;
+  width: 80px;
+}
+.todoList__loader div {
+  animation: todoList__loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.todoList__loader div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.todoList__loader div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.todoList__loader div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.todoList__loader div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.todoList__loader div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.todoList__loader div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.todoList__loader div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.todoList__loader div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.todoList__loader div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.todoList__loader div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.todoList__loader div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.todoList__loader div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.todoList__loader div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.todoList__loader div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.todoList__loader div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.todoList__loader div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.todoList__loader div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes todoList__loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
